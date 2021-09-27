@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/drawable-v24/ic_edit.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_note_add.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/add_note_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/note_detail_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/note_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/notes_fragment.xml" value="0.1" />

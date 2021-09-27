@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/notesFragment">
 
     <fragment
         android:id="@+id/notesFragment"
         android:name="com.example.android.notes.notes.NotesFragment"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        tools:layout="@layout/notes_fragment">
         <action
             android:id="@+id/action_notesFragment_to_addNoteFragment"
             app:destination="@id/addNoteFragment" />
@@ -18,7 +20,8 @@
     <fragment
         android:id="@+id/addNoteFragment"
         android:name="com.example.android.notes.addnote.AddNoteFragment"
-        android:label="@string/add_note_fragment_label">
+        android:label="@string/add_note_fragment_label"
+        tools:layout="@layout/add_note_fragment">
         <action
             android:id="@+id/action_addNoteFragment_to_notesFragment"
             app:destination="@id/notesFragment"
@@ -28,7 +31,8 @@
     <fragment
         android:id="@+id/noteDetailFragment"
         android:name="com.example.android.notes.notedetail.NoteDetailFragment"
-        android:label="@string/note_detail_fragment_label">
+        android:label="@string/note_detail_fragment_label"
+        tools:layout="@layout/note_detail_fragment">
         <action
             android:id="@+id/action_noteDetailFragment_to_notesFragment"
             app:destination="@id/notesFragment"
