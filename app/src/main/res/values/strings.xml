@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="note_can_not_be_empty">Note can\'t be empty</string>
+    <string name="title_hint">Title.</string>
+    <string name="enter_your_note_here_hint">Enter your note here.</string>
+    <string name="no_notes">You have no notes</string>
+    <string name="save_note">Save note</string>
+    <string name="update_note">Update note</string>
+    <string name="delete_note">Delete note</string>
+    <string name="add_note">Add note</string>
+    <string name="delete_marked_menu">Delete marked</string>
+    <string name="delete_all_menu">Delete all</string>
+    <string name="add_note_fragment_label">Add Note</string>
+    <string name="note_detail_fragment_label">Note Details</string>
+    <string name="add_note_button">Add note button</string>
+    <string name="update_note_button">Update note button</string>
+    <string name="save_note_button">Save note button</string>
+</resources>

@@ -1,0 +1,60 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="addNoteViewModel"
+            type="com.example.android.notes.addnote.AddNoteViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/add_note_coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/add_note_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding">
+
+            <EditText
+                android:id="@+id/add_note_title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/title_hint"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@={addNoteViewModel.noteTitle}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/add_note_description_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/enter_your_note_here_hint"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="text"
+                android:text="@={addNoteViewModel.noteDescription}"
+                tools:ignore="Autofill" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save_note_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/save_note_button"
+            android:onClick="@{() -> addNoteViewModel.onSaveNoteClicked()}"
+            android:src="@drawable/ic_done" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

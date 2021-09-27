@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_note"
+        android:icon="@drawable/ic_note_add"
+        android:title="@string/add_note"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_add_note"
+        android:title="@string/add_note"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_delete_marked"
+        android:title="@string/delete_marked_menu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_delete_all"
+        android:title="@string/delete_all_menu"
+        app:showAsAction="never" />
+
+</menu>

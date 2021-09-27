@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="noteDetailViewModel"
+            type="com.example.android.notes.notedetail.NoteDetailViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/note_detail_coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/note_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding">
+
+            <EditText
+                android:id="@+id/note_detail_title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@={noteDetailViewModel.noteTitle}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor" />
+
+            <EditText
+                android:id="@+id/note_detail_description_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@null"
+                android:gravity="top"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="text"
+                android:text="@={noteDetailViewModel.noteDescription}"
+                tools:ignore="Autofill,LabelFor" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/update_note_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin"
+            android:contentDescription="@string/update_note_button"
+            android:onClick="@{() -> noteDetailViewModel.onUpdateNoteClicked()}"
+            android:src="@drawable/ic_done" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

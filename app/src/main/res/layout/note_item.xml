@@ -1,0 +1,45 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.widget.CompoundButton" />
+
+        <variable
+            name="note"
+            type="com.example.android.notes.notes.Note" />
+
+        <variable
+            name="notesViewModel"
+            type="com.example.android.notes.notes.NotesViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/note_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding"
+        android:paddingTop="@dimen/padding_top_bottom"
+        android:paddingRight="@dimen/padding"
+        android:paddingBottom="@dimen/padding_top_bottom">
+
+        <CheckBox
+            android:id="@+id/note_marked_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:checked="@{note.marked}"
+            android:onClick="@{(view) -> notesViewModel.onUpdateNoteMarked(note, ((CompoundButton)view).isChecked())}" />
+
+        <TextView
+            android:id="@+id/note_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin"
+            android:onClick="@{() -> notesViewModel.onNoteClicked(note)}"
+            android:text="@{note.title}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+    </LinearLayout>
+</layout>
